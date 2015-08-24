@@ -6,6 +6,9 @@
 /build
 /captures
 
+#ignore all the random files
+../../
+
 #built application files
 *.apk
 *.ap_
