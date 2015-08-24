@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Gym Log</string>
+    <string name="main_title">Hit the Gym</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_button">Workout</string>
+    <string name="title_activity_workout">WorkoutActivity</string>
+    <string name="history_button">History</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_finish_workout_activity">FinishWorkoutActivity</string>
+    <string name="delete_database">Delete History</string>
+
+    <string name="exercise_name">Undefined</string>
+    <string name="repetition_num">Undefined</string>
+    <string name="title_activity_history_buttons">HistoryButtonsActivity</string>
+</resources>

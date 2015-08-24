@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorPrimaryDark">#FFA000</item>
+        <item name="colorAccent">#0288D1</item>
+    </style>
+
+    <style name="TitlePage">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="RepetitionEditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textColor">#ff222222</item>
+    </style>
+
+    <style name="ExerciseEditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:textColor">#ff222222</item>
+    </style>
+
+    <style name="CongratsText">
+        <item name ="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Congrats on completing your workout!</item>
+        <item name="android:textSize"> 32sp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

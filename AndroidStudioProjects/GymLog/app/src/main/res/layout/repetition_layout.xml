@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/repetition_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:text="Reps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="0dp"
+        android:textSize="24dp"
+        android:textColor="#ff222222"
+        />
+    
+    <EditText android:id="@+id/exercise1_rep1"
+        style="@style/RepetitionEditText"/>
+
+    <EditText android:id="@+id/exercise1_rep2"
+        style="@style/RepetitionEditText" />
+
+    <EditText android:id="@+id/exercise1_rep3"
+        style="@style/RepetitionEditText"/>
+
+    <EditText android:id="@+id/exercise1_rep4"
+        style="@style/RepetitionEditText"/>
+
+    <EditText android:id="@+id/exercise1_rep5"
+        style="@style/RepetitionEditText"/>
+
+    <!--<EditText android:id="@+id/exercise1_rep6"
+        style="@style/RepetitionEditText"/>-->
+
+    <!--<View android:id="@+id/placeholder"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:id="@+id/add_repetition_button"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:text="+"
+            android:textSize="32dp"
+            android:onClick="addRepetitionField"/>-->
+
+</LinearLayout>
