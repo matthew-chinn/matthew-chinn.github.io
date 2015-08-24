@@ -12,7 +12,8 @@
 
     <ScrollView android:id="@+id/exercise_scroll_view"
         android:layout_width="fill_parent"
-        android:layout_height="400dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout android:id="@+id/exercise_layout_within_scrollview"
             android:layout_width="fill_parent"
@@ -24,11 +25,6 @@
 
     </ScrollView>
 
-    <View android:id="@+id/placeholder"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="0dp"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,18 +33,22 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Add exercise"
-            android:textSize="24dp"
-            android:onClick="addExerciseField"/>
+            android:textSize="20dp"
+            android:onClick="addExerciseField"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/button"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="match_parent"
+            android:layout_height="48dp"
             android:text="Finished"
-            android:textSize="24dp"
-            android:onClick="finishWorkout"/>
+            android:textSize="20dp"
+            android:onClick="finishWorkout"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/button"/>
 
     </LinearLayout>
 

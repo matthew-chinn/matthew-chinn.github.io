@@ -24,9 +24,6 @@ public class FinishWorkoutActivity extends ActionBarActivity {
 
         ArrayList<String> exercises = (ArrayList<String>)getIntent().getExtras().getSerializable(WorkoutActivity.HISTORY);
 
-        //LinearLayout.LayoutParams matchWwrapH = new LinearLayout.LayoutParams(
-        //       LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setPadding(PADDING, PADDING, PADDING, PADDING);
@@ -35,7 +32,6 @@ public class FinishWorkoutActivity extends ActionBarActivity {
         layout.addView(congrats);
 
         ScrollView scrollView = DisplayHelper.displayExercise(layout, exercises, this);
-        //addContentView(scrollView, matchWwrapH);
 
         LinearLayout outerLayout = new LinearLayout(this);
         outerLayout.setOrientation(LinearLayout.VERTICAL);
@@ -49,6 +45,7 @@ public class FinishWorkoutActivity extends ActionBarActivity {
                 startActivity(history);
             }
         });
+        historyButton.setBackgroundResource(R.drawable.button);
 
         Button homeButton = new Button(this);
         homeButton.setText("Home");
@@ -59,6 +56,7 @@ public class FinishWorkoutActivity extends ActionBarActivity {
                 startActivity(home);
             }
         });
+        homeButton.setBackgroundResource(R.drawable.button);
 
         LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
                 0, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f);

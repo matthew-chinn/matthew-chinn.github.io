@@ -80,6 +80,7 @@ public class HistoryActivity extends ActionBarActivity {
                 startActivity(home);
             }
         });
+        homeButton.setBackgroundResource(R.drawable.button);
 
         final SharedPreferences settings = getPreferences(MODE_PRIVATE);
 
@@ -93,6 +94,7 @@ public class HistoryActivity extends ActionBarActivity {
                 newFragment.show(getFragmentManager(), "email workout");
             }
         });
+        emailButton.setBackgroundResource(R.drawable.button);
 
         linearLayout.addView(emailButton);
         linearLayout.addView(homeButton);

@@ -1,6 +1,7 @@
 package com.example.matt.gymlog;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;

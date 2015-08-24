@@ -7,14 +7,4 @@
     android:orientation="vertical"
     tools:context="com.example.matt.gymlog.FinishWorkoutActivity">
 
-    <!--<TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Congrats on completing your workout!"
-        android:textSize="32sp"
-        android:layout_marginBottom="16dp"
-        android:textStyle="bold"/>
-
-    <include layout="@layout/sample_history"/>-->
-
 </LinearLayout>

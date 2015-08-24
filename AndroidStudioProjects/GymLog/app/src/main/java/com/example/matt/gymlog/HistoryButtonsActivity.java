@@ -75,6 +75,7 @@ public class HistoryButtonsActivity extends ActionBarActivity {
         LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         homeButton.setLayoutParams(buttonParams);
+        homeButton.setBackgroundResource(R.drawable.button);
 
         TextView placeHolder = new TextView(this);
         LinearLayout.LayoutParams space = new LinearLayout.LayoutParams(0,0,1.0f);
@@ -133,6 +134,7 @@ public class HistoryButtonsActivity extends ActionBarActivity {
                     dateClicked(v);
                 }
             });
+            button.setBackgroundResource(R.drawable.button);
             c.moveToNext();
             toReturn.add(button);
         }
