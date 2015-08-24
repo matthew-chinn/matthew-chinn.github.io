@@ -1,5 +1,7 @@
 package com.example.matt.gymlog;
 
+import android.app.Activity;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -38,6 +40,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void resetDatabase()
     {
         onUpgrade(getWritableDatabase(), 1, 1);
+    }
+
+    public static void resetDatabaseDialog(Activity a){
+        DialogFragment newFragment = new DeleteDatabaseDialog(a);
+        newFragment.show(a.getFragmentManager(), "deleteDatabase");
     }
 }
 

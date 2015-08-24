@@ -33,6 +33,14 @@
             android:name=".HistoryActivity"
             android:label="@string/title_activity_history" >
         </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,20 +1,18 @@
 package com.example.matt.gymlog;
 
-import android.app.DialogFragment;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
+public class AboutActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_about);
     }
 
     @Override
@@ -47,15 +45,4 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void enterApp(View view) {
-        Intent intent = new Intent(this, WorkoutActivity.class);
-        startActivity(intent);
-    }
-
-    public void history(View view) {
-        Intent intent = new Intent(this, HistoryButtonsActivity.class);
-        startActivity(intent);
-    }
-
 }

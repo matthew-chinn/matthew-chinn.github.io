@@ -3,4 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
     <item android:id="@+id/action_delete_database" android:title="@string/delete_database"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/help" android:title="@string/help"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/about" android:title="@string/about"
+        android:orderInCategory="100" app:showAsAction="never" />
 </menu>

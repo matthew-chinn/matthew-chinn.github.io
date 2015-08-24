@@ -9,8 +9,15 @@
     <string name="title_activity_history">HistoryActivity</string>
     <string name="title_finish_workout_activity">FinishWorkoutActivity</string>
     <string name="delete_database">Delete History</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
 
     <string name="exercise_name">Undefined</string>
     <string name="repetition_num">Undefined</string>
     <string name="title_activity_history_buttons">HistoryButtonsActivity</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About</string>
+
+    <string name="help_info">Click workout to begin a workout, or history to view past workouts.</string>
+    <string name="about_text">Contact me at mattchinn96@gmail.com</string>
 </resources>
