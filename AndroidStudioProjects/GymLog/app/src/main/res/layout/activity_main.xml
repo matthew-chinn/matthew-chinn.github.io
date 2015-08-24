@@ -7,11 +7,11 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/gorilla_image_view"
+        android:id="@+id/dumbbell"
         android:layout_width="256dp"
         android:layout_height="256dp"
         android:layout_alignParentTop="true"
-        android:src="@drawable/gorilla"
+        android:src="@drawable/dumbbell"
         style="@style/TitlePage" />
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="32dp"
-        android:layout_below="@id/gorilla_image_view"
+        android:layout_below="@id/dumbbell"
         style="@style/TitlePage" />
 
     <Button
