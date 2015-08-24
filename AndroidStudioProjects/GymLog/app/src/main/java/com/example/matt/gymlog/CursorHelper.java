@@ -41,7 +41,7 @@ public class CursorHelper {
             for(int j = 0; j < numCol; j++)
             {
                 String data = c.getString(j);
-                if(data != null && data.trim().equals(""))
+                if(data != null && !data.trim().equals(""))
                     exercises.add(c.getString(j));
             }
             c.moveToNext();

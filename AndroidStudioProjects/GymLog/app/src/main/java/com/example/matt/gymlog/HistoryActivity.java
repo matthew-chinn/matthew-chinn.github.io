@@ -61,9 +61,9 @@ public class HistoryActivity extends ActionBarActivity {
                 null
         );
 
-        Log.v("HistoryActivity 58", CursorHelper.readCursor(c, "Data"));
+        Log.v("HistoryActivity 64", CursorHelper.readCursor(c, "Data"));
         ArrayList<String> exercises = CursorHelper.makeExerciseArray(c);
-        Log.v("HistoryActivity 60", exercises.toString());
+        Log.v("HistoryActivity 66", exercises.toString());
         ScrollView scrollView = DisplayHelper.displayExercise(layout, exercises, this);
 
         LinearLayout linearLayout = new LinearLayout(this);

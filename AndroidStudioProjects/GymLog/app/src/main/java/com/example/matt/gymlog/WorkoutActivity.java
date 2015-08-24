@@ -1,5 +1,6 @@
 package com.example.matt.gymlog;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -34,22 +35,6 @@ public class WorkoutActivity extends ActionBarActivity {
     public final static String HISTORY = "com.example.matt.gymlog.HISTORY";
     private final static boolean DISTINCT = true;
     public int exerciseCount = 0;
-
-    //make keyboard disappear on enter
-    TextView.OnEditorActionListener exampleListener = new TextView.OnEditorActionListener(){
-        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-            if(event != null && event.getAction() != KeyEvent.ACTION_DOWN)
-                return false;
-
-            /*if (actionId == EditorInfo.IME_ACTION_DONE
-                    && event.getAction() == KeyEvent.ACTION_DOWN) */
-            else if(event == null || event.getKeyCode() == KeyEvent.KEYCODE_ENTER)
-            {
-                hideKeyboard();//match this behavior to your 'Send' (or Confirm) button
-            }
-            return true;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,16 +86,16 @@ public class WorkoutActivity extends ActionBarActivity {
 
         Spinner spinner = (Spinner) exerciseLayout.getChildAt(2);
         SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
-        addSpinnerOptions(spinner, db, (EditText)exerciseLayout.getChildAt(1));
+        addSpinnerOptions(spinner, db, (EditText) exerciseLayout.getChildAt(1));
 
         TextView addListener = (TextView)linearLayout.findViewById(R.id.exercise_edit_text);
-        addListener.setOnEditorActionListener(exampleListener);
+        addListener.setOnEditorActionListener(TextViewHelper.getEditorListener(this));
 
         LinearLayout rep = (LinearLayout)linearLayout.findViewById(R.id.repetition_layout);
         for(int i = 0; i < rep.getChildCount(); i++)
         {
             addListener = (TextView)rep.getChildAt(i);
-            addListener.setOnEditorActionListener(exampleListener);
+            addListener.setOnEditorActionListener(TextViewHelper.getEditorListener(this));
         }
 
         //layout.addView(linearLayout);
@@ -161,14 +146,14 @@ public class WorkoutActivity extends ActionBarActivity {
         });
     }
 
-    public void setupUI(View view) {
+    public void setupUI(final View view) {
 
         //Set up touch listener for non-text box views to hide keyboard.
         if(!(view instanceof EditText)) {
             view.setOnTouchListener(new View.OnTouchListener() {
 
                 public boolean onTouch(View v, MotionEvent event) {
-                    hideKeyboard();
+                    TextViewHelper.hideKeyboard((Activity) view.getContext());
                     return false;
                 }
 
@@ -177,7 +162,7 @@ public class WorkoutActivity extends ActionBarActivity {
 
         else //is an EditText
         {
-            ((EditText) view).setOnEditorActionListener(exampleListener);
+            ((EditText)view).setOnEditorActionListener(TextViewHelper.getEditorListener(this));
         }
         //If a layout container, iterate over children and seed recursion.
         if (view instanceof ViewGroup) {
@@ -185,15 +170,6 @@ public class WorkoutActivity extends ActionBarActivity {
                 View innerView = ((ViewGroup) view).getChildAt(i);
                 setupUI(innerView);
             }
-        }
-    }
-
-    private void hideKeyboard() {
-        // Check if no view has focus:
-        View view = this.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
-            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
 
@@ -274,7 +250,7 @@ public class WorkoutActivity extends ActionBarActivity {
         {
             EditText editText = (EditText)layout.getChildAt(i);
             String text = editText.getText().toString();
-            if(text.trim().equals(""))
+            if(!text.trim().equals(""))
             {
                 toReturn += text + " ";
             }
