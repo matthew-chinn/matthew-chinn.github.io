@@ -24,7 +24,6 @@ public class HistoryButtonsActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_history_buttons);
 
         DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -120,14 +119,15 @@ public class HistoryButtonsActivity extends ActionBarActivity {
 
     public ArrayList<Button> makeButtons(Cursor c)
     {
+        LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        buttonParams.setMargins(0,0,0,8);
         ArrayList<Button> toReturn = new ArrayList<>();
         int numRow = c.getCount();
         for(int i = 0; i < numRow; i++)
         {
             Button button = new Button(this);
             button.setText(c.getString(0)); //the date
-            button.setHeight(32);
-            button.setMaxWidth(64);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -135,6 +135,7 @@ public class HistoryButtonsActivity extends ActionBarActivity {
                 }
             });
             button.setBackgroundResource(R.drawable.button);
+            button.setLayoutParams(buttonParams);
             c.moveToNext();
             toReturn.add(button);
         }

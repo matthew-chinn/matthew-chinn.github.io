@@ -70,6 +70,8 @@ public class HistoryActivity extends ActionBarActivity {
         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
         linearLayout.setLayoutParams(DisplayHelper.MATCHW_WRAPH);
 
+        DisplayHelper.WEIGHTW_WRAPH.setMargins(4,0,4,4);
+
         Button homeButton = new Button(this);
         homeButton.setText("Home");
         homeButton.setLayoutParams(DisplayHelper.WEIGHTW_WRAPH);
@@ -90,7 +92,7 @@ public class HistoryActivity extends ActionBarActivity {
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment newFragment = new EmailDialog(settings, date, c,v);
+                DialogFragment newFragment = new EmailDialog(settings, date, c, v);
                 newFragment.show(getFragmentManager(), "email workout");
             }
         });
