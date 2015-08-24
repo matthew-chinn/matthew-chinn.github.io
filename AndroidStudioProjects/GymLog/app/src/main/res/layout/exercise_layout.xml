@@ -13,7 +13,8 @@
         android:layout_marginBottom="8dp"/>
 
     <EditText android:id="@+id/exercise_edit_text"
-        style="@style/ExerciseEditText" />
+        style="@style/ExerciseEditText"
+        android:layout_gravity="center_vertical"/>
 
     <Spinner
         android:id="@+id/exercise_spinner"
