@@ -1,6 +1,5 @@
 /** general layout */
 body {
-    padding-top: 30px;
     position: relative;
 
     * {
@@ -8,7 +7,6 @@ body {
     }
 
     .main-content {
-        margin-top: 10px;
     }
 }
 
@@ -18,12 +16,52 @@ body {
     width: 100%;
 }
 
+$header-height: 70px;
 /** header */
 .header-strip {
-    background-color: white;
+    background-color: #ffcc66;
+    border: 7px solid #e08906;
+    
+    width: 100%;
+    height: $header-height;
+    z-index: 3; //hide text as scrolling down
 
-    @media (min-width: 450px){
-        padding-left: 30px;
+    ul {
+        text-align: center;
+
+        li{
+            a{
+                height: 56px; //header-height - 2*border
+                font-size: 25px;
+            }
+            height: 56px; //header-height - 2*border
+            display: inline-block;
+        }
+
+        .top-button{
+            //hide eventually
+        }
+    }
+}
+
+.header-filler {
+    display: none;
+    height: $header-height;
+
+}
+
+//small screen condense buttons
+@media (max-width: 600px){
+    .header-strip ul li {
+        a{
+            width: 90px;
+            padding: 10px 0px;
+        }
+
+        //hide home button
+        &.top-button {
+            display: none;
+        }
     }
 }
 
@@ -52,20 +90,17 @@ body {
 /* each section i.e. about, contact, resume */
 .section-spacing{
     position: relative;
-    bottom:30px;
+    bottom: $header-height;
 }
 
 div.section {
     width: 85%;
     padding: 0px;
     margin: 0 auto;
-}
 
-/* about */
-
-@media (min-width: 600px){
-    .about-info {
-        width: 90%;
+    h1, p {
+        position: relative;
+        z-index: 1;
     }
 }
 

@@ -4,7 +4,6 @@ var cookieX, cookieY, runnerX, runnerY, cookie, runnerSpeed, repeat, prevFace;
 var runnerbutton, runnerBody, runnerFatBody, runnerRLeg, runnerLLeg, 
     runnerRArm, runnerLArm, runnerREye, runnerMouth;
 var animationDiv, height, width;
-var navbar;
 
 $(document).ready(function(){
     runner = $('#runner');
@@ -17,7 +16,6 @@ $(document).ready(function(){
     animationDiv = $('.animation-div');
     height = animationDiv.height();
     width = animationDiv.width();
-    navbar = $('.header-strip');
 
     runnerbutton.css( { margin: "0 auto", position: "absolute", bottom: 10,
                         right: 10 } );
@@ -188,7 +186,7 @@ function layTreat(e)
 {
     cookieCompensate = parseInt(cookie.css("width")) / 2;
     cookieX = e.pageX - cookieCompensate;
-    cookieY = e.pageY - navbar.height(); 
+    cookieY = e.pageY - cookieCompensate; 
     console.log(cookieY);
 
     cookie.css("top",cookieY)

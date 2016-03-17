@@ -1,3 +1,4 @@
+//NOT CURRENTLY IN USE
 var animationDiv, height, width, numTotalPixels;
 var jquery_canvas, canvas, ctx;
 var picture, jquery_picture, picHeight, picWidth, picX, picY;

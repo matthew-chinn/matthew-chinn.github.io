@@ -61,15 +61,25 @@
     .animation-name {
         border-radius: 20px;
         background-color: beige;
-
-        text {
-            font-size: 55px;
-            font-family: 'Sigmar One', cursive;
-        }
+        color: red;
+        font-size: 55px;
+        font-family: 'Sigmar One', cursive;
+        padding: 5px 10px;
+        height: 70px;
+        width: 555px;
+        text-align: center;
 
         #fullname {
             //in js for dynamic
             z-index: 1;
+        }
+    }
+
+    @media (max-width: 600px){
+        .animation-name {
+            width: 300px;
+            height: 45px;
+            font-size: 30px;
         }
     }
 
