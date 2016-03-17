@@ -1,0 +1,139 @@
+/** general layout */
+body {
+    padding-top: 30px;
+    position: relative;
+
+    * {
+        padding: 0;
+    }
+
+    .main-content {
+        margin-top: 10px;
+    }
+}
+
+.container {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+}
+
+/** header */
+.header-strip {
+    background-color: white;
+
+    @media (min-width: 450px){
+        padding-left: 30px;
+    }
+}
+
+/** footer */
+.footer {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    margin-bottom: 5px;
+
+    small {
+        float: right;
+        padding-right: 20px;
+    }
+    
+    a {
+        float: left;
+        padding-left: 20px;
+    }
+
+    * {
+        font-size: 10px;
+    }
+}
+
+/* each section i.e. about, contact, resume */
+.section-spacing{
+    position: relative;
+    bottom:30px;
+}
+
+div.section {
+    width: 85%;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+/* about */
+
+@media (min-width: 600px){
+    .about-info {
+        width: 90%;
+    }
+}
+
+$carousel-height: 475px;
+#carousel-container{
+    width: 90%;
+    margin: 0 auto;
+    .carousel-inner {
+        height: $carousel-height;
+        .item {
+            height: 400px; 
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .carousel-caption {
+            color: black;
+            bottom: -30px;
+        }
+    }
+}
+
+.carousel-indicators {
+    background-color: #cccccc;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: -25%;
+}
+
+.carousel-caption-description{
+   /* font-size: 15px;
+    color: #333333;
+    background-color: white;
+    border-radius: 15px;
+    */
+}
+
+
+/* resume */
+
+.courses {
+    margin-left: 20px;
+
+    ul li {
+        padding-left: 0px;
+    }
+}
+
+.work-description{
+    ul {
+        margin-left: 20px;
+    }
+}
+
+.work-position, .leadership-position {
+    font-style: italic;
+}
+
+@media (min-width: 600px){
+    .leadership-description {
+        width: 80%;
+    }
+}
+
+.extracurricular-org {
+    font-weight: bold;
+}

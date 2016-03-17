@@ -1,0 +1,152 @@
+/** general layout */
+body {
+  padding-top: 30px;
+  position: relative; }
+  body * {
+    padding: 0; }
+  body .main-content {
+    margin-top: 10px; }
+
+.container {
+  margin: 0;
+  padding: 0px;
+  width: 100%; }
+
+/** header */
+.header-strip {
+  background-color: white; }
+  @media (min-width: 450px) {
+    .header-strip {
+      padding-left: 30px; } }
+
+/** footer */
+.footer {
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  margin-bottom: 5px; }
+  .footer small {
+    float: right;
+    padding-right: 20px; }
+  .footer a {
+    float: left;
+    padding-left: 20px; }
+  .footer * {
+    font-size: 10px; }
+
+/* each section i.e. about, contact, resume */
+.section-spacing {
+  position: relative;
+  bottom: 30px; }
+
+div.section {
+  width: 85%;
+  padding: 0px;
+  margin: 0 auto; }
+
+/* about */
+@media (min-width: 600px) {
+  .about-info {
+    width: 90%; } }
+#carousel-container {
+  width: 90%;
+  margin: 0 auto; }
+  #carousel-container .carousel-inner {
+    height: 475px; }
+    #carousel-container .carousel-inner .item {
+      height: 400px; }
+      #carousel-container .carousel-inner .item img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    #carousel-container .carousel-inner .carousel-caption {
+      color: black;
+      bottom: -30px; }
+
+.carousel-indicators {
+  background-color: #cccccc;
+  border-radius: 20px;
+  width: 50%;
+  margin-left: -25%; }
+
+.carousel-caption-description {
+  /* font-size: 15px;
+   color: #333333;
+   background-color: white;
+   border-radius: 15px;
+   */ }
+
+/* resume */
+.courses {
+  margin-left: 20px; }
+  .courses ul li {
+    padding-left: 0px; }
+
+.work-description ul {
+  margin-left: 20px; }
+
+.work-position, .leadership-position {
+  font-style: italic; }
+
+@media (min-width: 600px) {
+  .leadership-description {
+    width: 80%; } }
+.extracurricular-org {
+  font-weight: bold; }
+.animation-div {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  /* cookie runner */
+  /* name animation */
+  /* my pic */ }
+  .animation-div svg:not(#runner) .eye {
+    fill: white;
+    stroke: black;
+    stroke-width: 1; }
+  .animation-div .hide {
+    visibility: hidden; }
+  .animation-div .hair {
+    stroke: black;
+    stroke-width: 1; }
+  .animation-div #runner .leg {
+    stroke: #000099;
+    stroke-width: 3;
+    fill: none; }
+  .animation-div #runner .arm {
+    stroke: black;
+    stroke-width: 1;
+    fill: none; }
+  .animation-div #runner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1; }
+  .animation-div #cookie {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 1; }
+  .animation-div #fatbody {
+    visibility: hidden; }
+  .animation-div .animation-name {
+    border-radius: 20px;
+    background-color: beige; }
+    .animation-div .animation-name text {
+      font-size: 55px;
+      font-family: 'Sigmar One', cursive; }
+    .animation-div .animation-name #fullname {
+      z-index: 1; }
+  .animation-div #lastname {
+    z-index: 1; }
+  .animation-div #firstname {
+    z-index: 1; }
+  .animation-div .my-picture-div {
+    margin: 0 auto;
+    position: relative;
+    top: 135px;
+    text-align: center; }
+    .animation-div .my-picture-div img {
+      height: 250px; }
