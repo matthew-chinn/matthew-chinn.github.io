@@ -68,8 +68,12 @@ end
                         described below.", "leadership" )
 
 @projects = Array.new
-@projects << Project.new( "Alpha Phi Omega Website Features", "#", "image.jpg", 
-                         "Forum and requirement tracker", @projects.count + 1 )
+@projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#", "greensheet.png", 
+                         "Help members record their service hours and other
+                         requirements.", @projects.count + 1 )
+@projects << Project.new( "Forum (Ruby on Rails)", "#", "forum.png", 
+                         "Help members record their service hours and other
+                         requirements.", @projects.count + 1 )
 
 erb = ERB.new(File.open("#{__dir__}/website.html.erb").read, 0, '>')
 puts erb.result binding

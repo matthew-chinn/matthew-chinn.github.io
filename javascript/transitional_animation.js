@@ -90,7 +90,6 @@ function rgb(r,g,b) {
 
 function centerName() {
     calibrate();
-    console.log("HI");
     fullName.css( { "top": nameHeight,
                      "left": centerNameFactor,
                      "position": "absolute" } );
