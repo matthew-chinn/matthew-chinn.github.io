@@ -1,0 +1,99 @@
+// all css for animation div
+.animation-div {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    //background-color: #4db8ff; <- set in javascript
+    // background-color: #000033; if doing pixel thing use this
+
+    /* cookie runner */
+    svg:not(#runner) .eye{
+        fill:white;
+        stroke:black;
+        stroke-width:1;
+    }
+
+    .hide {
+        visibility:hidden;
+    }
+
+    .hair{
+        stroke:black;
+        stroke-width:1;
+    }
+
+    #runnerbutton {
+        //see js
+    }
+
+    #runner .leg{
+        stroke:#000099;
+        stroke-width:3;
+        fill:none;
+    }
+
+    #runner .arm{
+        stroke:black;
+        stroke-width:1;
+        fill:none;
+    }
+
+    #runner{
+        position:absolute;
+        top:10px;
+        left:10px;
+        z-index: 1;
+    }
+
+    #cookie{
+        position:absolute;
+        width:10px;
+        height:10px;
+        z-index:1;
+    }
+
+    #fatbody {
+        visibility: hidden;
+    }
+
+    /* name animation */
+    .animation-name {
+        border-radius: 20px;
+        background-color: beige;
+
+        text {
+            font-size: 55px;
+            font-family: 'Sigmar One', cursive;
+        }
+
+        #fullname {
+            //in js for dynamic
+            z-index: 1;
+        }
+    }
+
+
+    #lastname {
+        //in js for dynamic
+        z-index:1;
+    }
+
+    #firstname {
+        //in js for dynamic
+        z-index:1;
+    }
+
+
+    /* my pic */
+    .my-picture-div{
+        margin: 0 auto;
+        position: relative;
+        top: 135px;
+        text-align: center;
+        img {
+            height: 250px;
+        }
+
+    }
+}

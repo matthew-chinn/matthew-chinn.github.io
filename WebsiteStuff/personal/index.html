@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matthew Chinn</title>
+  <link href='https://fonts.googleapis.com/css?family=Sigmar+One' 
+        rel='stylesheet' type='text/css'>
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS Bootstrap-->
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+  crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript Bootstrap-->
+  <script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+  crossorigin="anonymous"></script>
+
+  <script src="script.js" type="text/javascript"></script>
+  <script src="javascript/velocity.js" type="text/javascript"></script>
+  <link rel='stylesheet' type='text/css' href="style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".nav-container">
+
+  <!-- HEADER -->
+  <header class="navbar navbar-fixed-top">
+    <div class="container nav-container">
+      <ul class="nav nav-pills header-strip">
+           <li role="presentation" class="active">
+                        </li>
+           <li role="presentation"><a href="#about">About</a></li>
+           <li role="presentation"><a href="#contact">Contact</a></li>
+           <li role="presentation"><a href="#resume">Resume</a></li>
+           <li role="presentation"><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container main-content">
+    <!-- ANIMATION -->
+    <div class="animation-div">
+      <!-- ME -->
+      <div id="me">
+
+        <!--If doing pixel thing, uncomment this div -->
+        <div class="my-picture-div">
+          <img id="me-picture" src="images/aboutpic.png" alt="Picture of Matt">
+        </div>
+
+        <canvas id="myCanvas">
+        </canvas>
+      <!-- No speech bubble for now
+        <svg id="speech-bubble" width="225" height="150">
+          <path stroke="#000000" id="svg_1" d="m2.5,18.65401l0,0c0,-8.9216
+          9.98707,-16.15401
+          22.30669,-16.15401l10.13944,0l0,0l48.66919,0l91.25461,0c5.91609,0
+          11.58989,1.70194 15.77324,4.7314c4.18329,3.02947 6.53345,7.1383
+          6.53345,11.4226l0,40.38504l0,0l0,24.23101l0,0c0,8.92162 -9.98703,16.15401
+          -22.30669,16.15401l-91.25461,0l-63.58029,41.07594l14.9111,
+          -41.07594l-10.13944,0c-12.31962,0
+          -22.30669,-7.23239 -22.30669,-16.15401l0,0l0,-24.23101l0,0l0,-40.38504z"
+          stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+          stroke-width="5" fill="none"/>
+        </svg>
+      -->
+
+      </div>
+
+      <!-- NAME -->
+      <!--
+      <div class="name-div" id="lastname">
+      <svg class="animation-name" height="80" width="250px">
+        <text x="15%" y="75%" fill="red">Chinn</text>
+      </svg>
+      </div>
+
+      <div class="name-div" id="firstname">
+      <svg class="animation-name" height="80" width="350px">
+        <text x="5%" y="75%" fill="red">Matthew</text>
+      </svg>
+      </div>
+      -->
+      <div class="name-div" id="fullname">
+      <svg class="animation-name" height="80" width="400px">
+        <text x="15%" y="75%" fill="red">Matthew Chinn</text>
+      </svg>
+      </div>
+
+      <!-- COOKIE RUN -->
+      <div id="runner" class="hide">
+      <svg width="40" height="60">
+          <circle id="face" cx="20" cy="20" r="6" stroke="black"
+              stroke-width=".5" fill="#D4BF94"/>
+          <ellipse id="lefteye" class="eye" cx="20" cy="19" rx=".8" ry="1.2"/>
+          <ellipse id="righteye" class="eye" cx="23" cy="19" rx=".8" ry="1.2"/>
+          
+          <path class="hair" d="M20,14 c2,-2 -2,-2 0,-4" 
+              stroke="black" stroke-width="1" fill="none"/>
+
+          <ellipse id="mouth" cx="22" cy="23" rx="1" ry=".6"/>
+
+          <polygon id="body" points="15,26 25,26 27,29 27,40 13,40 13,29"
+              fill="#B81212" stroke="black" stroke-width=".5" />
+
+          <ellipse id="fatbody" cx ="20" cy="34" ry="8" rx="10" 
+              stroke="black" fill="#B81212" stroke-width=".5"/>
+
+          <path id="rightarm" class="arm" d="M27,33 l2,0"/>
+          <path id="leftarm" class="arm" d="M20,30 l1,5 l5,0"/>
+
+          <path id="rightleg" class="leg" d="M23,40 l0,10"/>
+          <path id="leftleg" class="leg" d="M17,40 l0,10"/>
+      </svg>
+      </div>
+
+      <img id="cookie" src="images/cookie.jpg" class="hide"/>
+
+      <button class="btn btn-default" role="button" id="runnerbutton" 
+              type="button">
+        Click here
+      </button>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="section-spacing"></div>
+    <div class="about-section section">
+        <h1>About</h1>
+        <p class="about-info">I am a second year Computer Science major at the
+        University of California, San Diego. My technical interests are not
+        well-defined yet, and I am very curious about many different computer topics
+        ranging from Big Data to cybersecurity. Currently, I enjoy learning about
+        website and application development. 
+        </p>
+        <h5 class="favorites">Some of my favorite things:</h5>
+
+        <div class="row">
+          <p class="col-sm-6">Hobbies: Drums, guitar, volleyball, bowling</p>
+          <p class="col-sm-6">Animal: Dogs like 
+          <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg"
+             target="_blank">
+            this one</a>
+          </p>
+        </div>
+
+        <div class="row">
+          <p class="col-sm-6">TV Shows: Friends, The Office, Sherlock</p>
+          <p class="col-sm-6">Movies: Anything Marvel or comedy</p>
+        </div>
+
+        <div class="row">
+          <p class="col-sm-6">Music: Ed Sheeran, BORNS, CHVRCHES, James Bay
+          </p>
+          <p class="col-sm-6">Sport Teams: LA Angels Baseball, SD Chargers
+          Football</p>
+        </div>
+
+        <div class="row">
+          <p class="col-sm-6">Food: Anything with noodles or pasta</p>
+          <p class="col-sm-6">Sweet: Dark chocolate anything or Twix</p>
+        </div>
+          
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section-spacing"></div>
+    <div class="contact-section section">
+      <h1>Contact</h1>
+      <div class="row">
+        <p class="contact-info col-sm-12">My e-mail: 
+          <a href="mailto:mattchinn96@gmail.com">mattchinn96@gmail.com</a>
+        <p>
+        <p class="contact-info col-sm-12">My LinkedIn:
+          <a href="http://www.linkedin.com/in/mchinn1">linkedin.com/in/mchinn1</a>
+        </p>
+        <p class="contact-info col-sm-12">My GitHub:
+          <a href="http://www.github.com/matthew-chinn">github.com/matthew-chinn</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- RESUME -->
+    <div id="resume" class="section-spacing"></div>
+    <div class="resume-section section">
+      <h1>Resume</h1>
+      <p id="download_resume">
+        Download my resume <a href="resume.pdf" target="_blank">here</a>
+      </p>
+
+      <h4 id="education">Education</h4>
+        <div class="row" id="school">
+          <p class="col-sm-2">2014-Present</p>
+          <p class="col-sm-3">Bachelor of Science, Computer Science</p>
+          <p class="col-sm-3">The University of California, San Diego</p>
+        </div>
+        
+        <div class="row">
+          <p class="col-sm-2">Total GPA: 3.8</p>
+          <p class="col-sm-4">Minor: Economics</p>
+        </div> 
+
+        <div class="row">
+          <p style="font-weight:bold" class="col-sm-2">Relevant Courses:</p>
+        </div>
+
+        <div class="row courses">
+          <ul>
+                                      <li class=col-sm-5>Introduction to Java ( CSE 11 )</li>
+                      </ul>
+        </div>
+
+        <div class="work">
+          <h4 id="work-experience">Work Experience</h4>
+                      <div class="row">
+              <p class="col-sm-2">2015-Present</p>
+              <p class="col-sm-3">UCSD Computer Science Department</p>
+              <p class="col-sm-4 work-position">Tutor</p>
+            </div>
+
+            <div class="work-description">
+              <p> Tutored an Introduction to Java course. Gained experience
+                 leading discussion sections and a small study
+                 group. Assisted students with programming questions during lab
+                 hours or online. Graded programming
+                 assignments, quizzes, and exams. </p>
+            </div>
+          
+        </div>
+        
+        <div class="leadership">
+          <h4>Leadership</h4>
+                      <div class="row">
+              <p class="col-sm-2">January 2016-Present</p>
+              <p class="col-sm-3">Alpha Phi Omega</p>
+              <p class="col-sm-3 leadership-position">Webmaster</p>
+            </div>
+
+            <div class="leadership-description row">
+              <p> Appointed to a position on the executive board to
+                        manage the organization’s website, including bug fixes
+                        and improvements. Dealt with member requests in a timely
+                        manner. Headed a committee. Projects are
+                        described below. </p>
+            </div>
+          
+        </div>
+
+        <div class="extracurricular">
+          <h4>Extracurriculars</h4>
+          <div class="row">
+            <p class="col-sm-2 extracurricular-org">Alpha Phi Omega</p>
+            <p class="col-sm-8">National, co-ed, community service fraternity.</p>
+          </div>
+          <div class="row">
+            <p class="col-sm-2 extracurricular-org">Preuss School</p>
+            <p class="col-sm-8">Volunteered for a quarter at a transformative
+            school for under-priveliged children. Tutored high school freshmen in
+            math.</p>
+          </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="section-spacing"></div>
+    <div class="project-section section">
+      <h1>Projects</h1>
+      <div id="carousel-container" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+                      <li data-target="#carousel-container" data-slide-to="0" 
+                class="active"></li>
+                  </ol>
+
+        <div class="carousel-inner" role="listbox">
+                  <!-- Wrapper for slides -->
+            <div class="item active">
+              <a href="#">
+                              </a>
+              <div class="carousel-caption">
+                <p class="carousel-caption-description">Forum and requirement tracker</p>
+              </div>
+            </div>
+                </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-container" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-container" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="https://www.youtube.com/watch?v=WBrFkR2KnbQ" target="_blank">
+        Let it go.</a>
+        <a href="https://www.youtube.com/watch?v=XpE36ZmPe6U" target="_blank">
+        The Emotion.</a>
+        <a href="https://www.youtube.com/watch?v=N4tQEIymG4U" target="_blank">
+        Just Let it Out.</a>
+        <a href="https://www.youtube.com/watch?v=JyqemIbjcfg" target="_blank">
+        Recover.</a>
+        <small>Have a great day! <i class="em em-smile"></i>
+         This message has been approved by Matthew Chinn
+         <i class="em em---1"></i></small>
+    </footer>
+  </div>
+
+</body>
+</html>
