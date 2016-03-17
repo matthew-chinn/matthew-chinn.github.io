@@ -62,7 +62,7 @@ end
 @leaderships = Array.new
 @leaderships << Job.new( "January 2016-Present", "Alpha Phi Omega", "Webmaster",
                         "Appointed to a position on the executive board to
-                        manage the organization’s website, including bug fixes
+                        manage the organization's website, including bug fixes
                         and improvements. Dealt with member requests in a timely
                         manner. Headed a committee. Projects are
                         described below.", "leadership" )
