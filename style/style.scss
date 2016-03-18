@@ -17,10 +17,12 @@ body {
 }
 
 $header-height: 70px;
+$border: 7px;
+$inside-header: $header-height - 2*$border;
 /** header */
 .header-strip {
     background-color: #ffcc66;
-    border: 7px solid #e08906;
+    border: $border solid #e08906;
     
     width: 100%;
     height: $header-height;
@@ -31,16 +33,28 @@ $header-height: 70px;
 
         li{
             a{
-                height: 56px; //header-height - 2*border
+                height: $inside-header; //header-height - 2*border
                 font-size: 25px;
             }
-            height: 56px; //header-height - 2*border
+            height: $inside-header; //header-height - 2*border
             display: inline-block;
+
+            &.top-button{
+                display: none;
+                position: relative;
+                bottom: 3px; //to line up for somee reason
+
+                a{
+                    padding: 5px 5px;
+                }
+
+                img{
+                    height: 45px;
+                    width: 45px;
+                }
+            }
         }
 
-        .top-button{
-            //hide eventually
-        }
     }
 }
 

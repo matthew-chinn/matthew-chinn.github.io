@@ -6,7 +6,7 @@ var divWidth;
 var rChange, gChange, bChange;
 var red = 0, green = 102, blue = 255; //"#4db8ff" beginning background color
 
-var headerStrip, headerFiller;
+var headerStrip, headerFiller, topButton;
 
 var pic;
 var picDiv, picTop;
@@ -24,6 +24,7 @@ $(document).ready(function(){
 
     headerStrip = $('.header-strip');
     headerFiller = $('.header-filler');
+    topButton = $('.top-button');
 
     //first number is the rgb for the ending color
     rChange = (121- red) / halfHeight;
@@ -36,6 +37,22 @@ $(document).ready(function(){
     pic = $('#me-picture');
     picDiv = $('.my-picture-div');
     picTop = parseInt(picDiv.css( "top" ));
+
+    //scroll to button when clicked
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
 });
 
 //keep name centered if animation not moving
@@ -76,10 +93,12 @@ function scrollTransition(w){
     if( scrolledAmt >= divHeight ){
         headerStrip.css({ position: "fixed", top: "0px" });
         headerFiller.css({ display: "block" });
+        topButton.css("display", "inline-block");
     }
     else{
         headerStrip.css({ position: "static", top: "auto" });
         headerFiller.css({ display: "none" });
+        topButton.css("display", "none");
     }
 }
 

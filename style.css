@@ -24,6 +24,15 @@ body {
       .header-strip ul li a {
         height: 56px;
         font-size: 25px; }
+      .header-strip ul li.top-button {
+        display: none;
+        position: relative;
+        bottom: 3px; }
+        .header-strip ul li.top-button a {
+          padding: 5px 5px; }
+        .header-strip ul li.top-button img {
+          height: 45px;
+          width: 45px; }
 
 .header-filler {
   display: none;
