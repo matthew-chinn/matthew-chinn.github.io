@@ -150,6 +150,10 @@ div.section {
 }
 
 /* PROJECTS */
+.mobile-project {
+    display: none;
+}
+
 $carousel-height: 475px;
 #carousel-container{
     width: 100%;

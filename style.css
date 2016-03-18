@@ -91,6 +91,9 @@ div.section {
   font-weight: bold; }
 
 /* PROJECTS */
+.mobile-project {
+  display: none; }
+
 #carousel-container {
   width: 100%;
   margin: 0 auto;
