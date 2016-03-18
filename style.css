@@ -77,6 +77,8 @@ div.section {
   margin-left: 20px; }
   .courses ul li {
     padding-left: 0px; }
+  .courses span {
+    font-size: 10px; }
 
 .work-description ul {
   margin-left: 20px; }

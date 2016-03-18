@@ -21,14 +21,20 @@
 .favorites {
   display: none; }
 
+.courses li {
+  font-size: 1cm; }
+.courses span {
+  font-size: .7cm;
+  display: block; }
+
 .work .date {
-  font-size: 0.5cm;
+  font-size: 0.7cm;
   padding-top: 1cm; }
 .work .company {
   font-weight: 400; }
 
 .leadership .date {
-  font-size: 0.5cm;
+  font-size: 0.7cm;
   padding-top: 1cm; }
 .leadership .org {
   font-weight: 400; }

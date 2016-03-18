@@ -34,7 +34,18 @@ $blue: #0066ff;
     display: none;
 }
 
-$date-size: .5cm;
+.courses{
+    li{
+        font-size: 1cm;
+    }
+
+    span{
+        font-size: .7cm;
+        display: block;
+    }
+}
+
+$date-size: .7cm;
 $date-padding: 1cm;
 .work{
     .date{

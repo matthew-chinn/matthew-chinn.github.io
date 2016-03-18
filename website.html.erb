@@ -205,7 +205,7 @@
           <ul>
             <% @courses.each do |c| %>
             <% @class="col-md-7"; @class="col-md-5" if c.id % 2 == 1 %>
-              <li class=<%= @class %>><%= c.title %> ( <%= c.number %> )</li>
+            <li class=<%= @class %>><%= c.title %> <span>( <%= c.number %> )</span></li>
             <% end %>
           </ul>
         </div>
