@@ -68,10 +68,10 @@ end
                         described below.", "leadership" )
 
 @projects = Array.new
-@projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#", "greensheet.png", 
+@projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#", "images/greensheet.png", 
                          "Help members record their service hours and other
                          requirements.", @projects.count + 1 )
-@projects << Project.new( "Forum (Ruby on Rails)", "#", "forum.png", 
+@projects << Project.new( "Forum (Ruby on Rails)", "#", "images/forum.png", 
                          "Help members record their service hours and other
                          requirements.", @projects.count + 1 )
 
