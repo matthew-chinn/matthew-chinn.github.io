@@ -50,6 +50,16 @@ end
 
 @courses = Array.new
 @courses << Course.new( "Introduction to Java", "CSE 11", @courses.count + 1)
+@courses << Course.new( "Discrete Mathematics", "MATH 15A", @courses.count + 1)
+@courses << Course.new( "Mathematics for Algorithms & Systems", "CSE 21", @courses.count + 1)
+@courses << Course.new( "Basic Data Structures & OO Design", "CSE 12", @courses.count + 1)
+@courses << Course.new( "Software Tools & Techniques Laboratory", "CSE 15L", @courses.count + 1)
+@courses << Course.new( "Computer Organization & Systems Programming", "CSE 30", @courses.count + 1)
+@courses << Course.new( "Advanced Data Structures", "CSE 100", @courses.count + 1)
+@courses << Course.new( "Theory of Computability", "CSE 105", @courses.count + 1)
+@courses << Course.new( "Software Engineering", "CSE 110", @courses.count + 1)
+@courses << Course.new( "Components & Design Techniques for Digital Systems", "CSE 140", @courses.count + 1)
+@courses << Course.new( "Digital Systems Laboratory", "CSE 140L", @courses.count + 1)
 
 @jobs = Array.new
 @jobs << Job.new( "2015-Present", "UCSD Computer Science Department", "Tutor",
@@ -59,6 +69,12 @@ end
                  hours or online. Graded programming
                  assignments, quizzes, and exams." )
 
+@jobs << Job.new( "July 2015", "Digital Media Academy", "Teacher Assistant",
+                  "Courses included Java Programming for Minecraft Modding and
+                  Introduction to Programming with Scratch. Provided one-on-one
+                  instruction to students in need. Led break-time activities and
+                  supervised during lunch." )
+
 @leaderships = Array.new
 @leaderships << Job.new( "January 2016-Present", "Alpha Phi Omega", "Webmaster",
                         "Appointed to a position on the executive board to
@@ -66,6 +82,11 @@ end
                         and improvements. Dealt with member requests in a timely
                         manner. Headed a committee. Projects are
                         described below.", "leadership" )
+
+@leaderships << Job.new( "January-March 2015", "Alpha Phi Omega", "Finance Chair",
+                         "Elected to my pledge class executive board. Led a committee to raise $1000+
+                         through fundrasiers such as restaurant coupons, pie deliveries, and face pie-ing.",
+                         "leadership" )
 
 @projects = Array.new
 @projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#", "images/greensheet.png", 
