@@ -26,14 +26,14 @@ $(document).ready(function(){
     headerFiller = $('.header-filler');
     topButton = $('.top-button');
 
+    calibrate();
+    centerName();
+
     //first number is the rgb for the ending color
     rChange = (121- red) / halfHeight;
     gChange = (198- green) / halfHeight;
     bChange = (236 - blue) / halfHeight;
     
-    calibrate();
-    centerName();
-
     pic = $('#me-picture');
     picDiv = $('.my-picture-div');
     picTop = parseInt(picDiv.css( "top" ));
