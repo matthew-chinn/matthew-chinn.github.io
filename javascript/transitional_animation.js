@@ -41,6 +41,8 @@ $(document).ready(function(){
     //scroll to button when clicked
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
+        if( $(this).attr("href")=="#carousel-container") return; //dont disrupt arrows
+
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

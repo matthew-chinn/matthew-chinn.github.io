@@ -71,9 +71,21 @@ end
 @projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#", "images/greensheet.png", 
                          "Help members record their service hours and other
                          requirements.", @projects.count + 1 )
+
 @projects << Project.new( "Forum (Ruby on Rails)", "#", "images/forum.png", 
                          "Help members record their service hours and other
                          requirements.", @projects.count + 1 )
+
+@projects << Project.new( "Palace (HTML/CSS/JS)",
+                         "http://matthew-chinn.github.io/palace", "images/palace.jpg", 
+                         "Implemented an online version of a card game to practice web development.
+                         Created a simple AI to play against the user. Code viewable on Github.", 
+                         @projects.count + 1 )
+
+@projects << Project.new( "Workout Android App (Java/XML)",
+                         "https://github.com/matthew-chinn/GymLog", "images/gym1.jpg", 
+                         "Allows the user, to record workout data, view history, and send emails containing that day's 
+                         workout statistics.", @projects.count + 1 )
 
 erb = ERB.new(File.open("#{__dir__}/website.html.erb").read, 0, '>')
 puts erb.result binding

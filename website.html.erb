@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Matthew Chinn</title>
+  <!-- font and emojis -->
   <link href='https://fonts.googleapis.com/css?family=Sigmar+One' 
         rel='stylesheet' type='text/css'>
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
@@ -254,8 +255,11 @@
 
     <!-- PROJECTS -->
     <div id="projects" class="section-spacing"></div>
+
     <div class="project-section section">
+
       <h1>Projects</h1>
+
       <div id="carousel-container" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -269,12 +273,11 @@
         <% @projects.each do |p| %>
           <!-- Wrapper for slides -->
             <div class="item <%= 'active' if p.id == 1 %>">
-              <a href="<%= p.link %>">
-                <%# image_tag p.image, alt: p.title,
-                                       id: p.title + "Image",
-                                       class: "project-picture" %>
+              <a href="<%= p.link %>" target="_blank">
+                <img src="<%= p.image %>" alt= "<%= p.title %>" id="<%= p.title%>-image" class= "project-picture" >
               </a>
               <div class="carousel-caption">
+                <h5 class="carousel-caption-title"><%= p.title %></h5>
                 <p class="carousel-caption-description"><%= p.description %></p>
               </div>
             </div>
@@ -291,6 +294,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+
     </div>
 
     <!-- FOOTER -->

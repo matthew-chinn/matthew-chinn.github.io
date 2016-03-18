@@ -68,38 +68,9 @@ div.section {
   width: 85%;
   padding: 0px;
   margin: 0 auto; }
-  div.section h1, div.section p {
+  div.section h1, div.section p, div.section h5 {
     position: relative;
     z-index: 1; }
-
-#carousel-container {
-  width: 90%;
-  margin: 0 auto; }
-  #carousel-container .carousel-inner {
-    height: 475px; }
-    #carousel-container .carousel-inner .item {
-      height: 400px; }
-      #carousel-container .carousel-inner .item img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-    #carousel-container .carousel-inner .carousel-caption {
-      color: black;
-      bottom: -30px; }
-
-.carousel-indicators {
-  background-color: #cccccc;
-  border-radius: 20px;
-  width: 50%;
-  margin-left: -25%; }
-
-.carousel-caption-description {
-  /* font-size: 15px;
-   color: #333333;
-   background-color: white;
-   border-radius: 15px;
-   */ }
 
 /* resume */
 .courses {
@@ -118,6 +89,44 @@ div.section {
     width: 80%; } }
 .extracurricular-org {
   font-weight: bold; }
+
+/* PROJECTS */
+#carousel-container {
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("images/sky.jpg"); }
+  #carousel-container .carousel-inner {
+    height: 475px; }
+    #carousel-container .carousel-inner .item {
+      height: 400px; }
+      #carousel-container .carousel-inner .item a img.project-picture {
+        height: 380px;
+        max-width: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      @media (max-width: 900px) {
+        #carousel-container .carousel-inner .item a img.project-picture {
+          height: 285px; } }
+      @media (max-width: 550px) {
+        #carousel-container .carousel-inner .item a img.project-picture {
+          height: 237.5px; } }
+    #carousel-container .carousel-inner .carousel-caption {
+      color: white;
+      bottom: -30px; }
+      #carousel-container .carousel-inner .carousel-caption .carousel-caption-description {
+        top: 50px;
+        font-weight: 400; }
+      #carousel-container .carousel-inner .carousel-caption .carousel-caption-title {
+        top: 50px;
+        font-weight: 500; }
+
+.carousel-indicators {
+  border-radius: 20px;
+  width: 50%;
+  margin-left: -25%;
+  bottom: 0px; }
 .animation-div {
   overflow: hidden;
   position: relative;
