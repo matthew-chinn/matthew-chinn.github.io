@@ -40,10 +40,12 @@
 #carousel-container {
   display: none; }
 
-.mobile-project img {
-  width: 90%;
-  margin: 0 auto;
+.mobile-project {
   display: block; }
+  .mobile-project img {
+    width: 90%;
+    margin: 0 auto;
+    display: block; }
 
 body h1 {
   font-size: 1.4cm;
