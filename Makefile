@@ -1,8 +1,11 @@
-all: style.css index.html script.js
+all: style.css index.html script.js mobile_style.css
 
 style.css: style/style.scss style/animation.scss
 	sass style/style.scss > style.css
 	sass style/animation.scss >> style.css
+
+mobile_style.css: style/mobile_style.scss
+	sass style/mobile_style.scss > mobile_style.css
 
 index.html: website.html.erb website.rb
 	ruby website.rb > index.html
@@ -14,4 +17,4 @@ cleanjs:
 	rm script.js
 
 clean:
-	rm style.css index.html script.js
+	rm style.css index.html script.js mobile_style.css

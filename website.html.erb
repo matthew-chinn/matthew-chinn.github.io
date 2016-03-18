@@ -24,8 +24,10 @@
 
   <script src="script.js" type="text/javascript"></script>
   <script src="javascript/velocity.js" type="text/javascript"></script>
-  <link rel='stylesheet' type='text/css' href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel='stylesheet' type='text/css' href="style.css">
+  <link rel='stylesheet' type='text/css' href="mobile_style.css" media="only
+  screen and (max-device-width: 480px)">
 
 </head>
 <body id="top" data-spy="scroll" data-target=".nav-container">
@@ -39,7 +41,8 @@
 
         <!--If doing pixel thing, uncomment this div -->
         <div class="my-picture-div">
-          <img id="me-picture" src="images/aboutpic.png" alt="Picture of Matt">
+          <img class="non-mobile" id="me-picture" src="images/aboutpic.png" alt="Picture of Matt">
+          <img id="me-picture-mobile" src="images/mobilepic.png" alt="Picture of Matt">
         </div>
 
         <canvas id="myCanvas">
@@ -69,7 +72,7 @@
       </div>
 
       <!-- COOKIE RUN -->
-      <div id="runner" class="hide">
+      <div id="runner" class="hide non-mobile">
       <svg width="40" height="60">
           <circle id="face" cx="20" cy="20" r="6" stroke="black"
               stroke-width=".5" fill="#D4BF94"/>
@@ -97,7 +100,7 @@
 
       <img id="cookie" src="images/cookie.jpg" class="hide"/>
 
-      <button class="btn btn-default" role="button" id="runnerbutton" 
+      <button class="btn btn-default non-mobile" role="button" id="runnerbutton" 
               type="button">
         Click here
       </button>
@@ -107,7 +110,7 @@
     <div class="header-filler"></div>
     <!-- NAV BUTTONS -->
     <div class="container nav-container header-strip">
-      <ul class="nav">
+      <ul class="nav non-mobile">
            <li><a href="#about">About</a></li>
            <li><a href="#contact">Contact</a></li>
            <li class="top-button"> <a href="#top"><img src="images/arrow.png"></a> </li>
@@ -128,32 +131,33 @@
         </p>
         <h5 class="favorites">Some of my favorite things:</h5>
 
-        <div class="row">
-          <p class="col-sm-6">Hobbies: Drums, guitar, volleyball, bowling</p>
-          <p class="col-sm-6">Animal: Dogs like 
-          <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg"
-             target="_blank">
-            this one</a>
-          </p>
-        </div>
+        <div class="favorites">
+          <div class="row">
+            <p class="col-md-6">Hobbies: Drums, guitar, volleyball, bowling</p>
+            <p class="col-md-6">Animal: Dogs like 
+            <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg"
+               target="_blank">
+              this one</a>
+            </p>
+          </div>
 
-        <div class="row">
-          <p class="col-sm-6">TV Shows: Friends, The Office, Sherlock</p>
-          <p class="col-sm-6">Movies: Anything Marvel or comedy</p>
-        </div>
+          <div class="row">
+            <p class="col-md-6">TV Shows: Friends, The Office, Sherlock</p>
+            <p class="col-md-6">Movies: Anything Marvel or comedy</p>
+          </div>
 
-        <div class="row">
-          <p class="col-sm-6">Music: Ed Sheeran, BORNS, CHVRCHES, James Bay
-          </p>
-          <p class="col-sm-6">Sport Teams: LA Angels Baseball, SD Chargers
-          Football</p>
-        </div>
+          <div class="row">
+            <p class="col-md-6">Music: Ed Sheeran, BORNS, CHVRCHES, James Bay
+            </p>
+            <p class="col-md-6">Sport Teams: LA Angels Baseball, SD Chargers
+            Football</p>
+          </div>
 
-        <div class="row">
-          <p class="col-sm-6">Food: Anything with noodles or pasta</p>
-          <p class="col-sm-6">Sweet: Dark chocolate anything or Twix</p>
-        </div>
-          
+          <div class="row">
+            <p class="col-md-6">Food: Anything with noodles or pasta</p>
+            <p class="col-md-6">Sweet: Dark chocolate anything or Twix</p>
+          </div>
+        </div> 
     </div>
 
     <!-- CONTACT -->
@@ -161,13 +165,13 @@
     <div class="contact-section section">
       <h1>Contact</h1>
       <div class="row">
-        <p class="contact-info col-sm-12">My e-mail: 
+        <p class="contact-info col-md-12">My e-mail: 
           <a href="mailto:mattchinn96@gmail.com">mattchinn96@gmail.com</a>
         <p>
-        <p class="contact-info col-sm-12">My LinkedIn:
+        <p class="contact-info col-md-12">My LinkedIn:
           <a href="http://www.linkedin.com/in/mchinn1">linkedin.com/in/mchinn1</a>
         </p>
-        <p class="contact-info col-sm-12">My GitHub:
+        <p class="contact-info col-md-12">My GitHub:
           <a href="http://www.github.com/matthew-chinn">github.com/matthew-chinn</a>
         </p>
       </div>
@@ -181,38 +185,38 @@
         Download my resume <a href="resume.pdf" target="_blank">here</a>
       </p>
 
-      <h4 id="education">Education</h4>
+      <h5 id="education">Education</h5>
         <div class="row" id="school">
-          <p class="col-sm-2">Class of 2018</p>
-          <p class="col-sm-3">Bachelor of Science, Computer Science</p>
-          <p class="col-sm-3">The University of California, San Diego</p>
+          <p class="col-md-2">Class of 2018</p>
+          <p class="col-md-3">Bachelor of Science, Computer Science</p>
+          <p class="col-md-3">The University of California, San Diego</p>
         </div>
         
         <div class="row">
-          <p class="col-sm-2">Total GPA: 3.8</p>
-          <p class="col-sm-4">Minor: Economics</p>
+          <p class="col-md-2">Total GPA: 3.8</p>
+          <p class="col-md-4">Minor: Economics</p>
         </div> 
 
         <div class="row">
-          <p style="font-weight:bold" class="col-sm-4">Relevant Courses:</p>
+          <h5 class="col-md-4">Relevant Courses:</h5>
         </div>
 
         <div class="row courses">
           <ul>
             <% @courses.each do |c| %>
-            <% @class="col-sm-7"; @class="col-sm-5" if c.id % 2 == 1 %>
+            <% @class="col-md-7"; @class="col-md-5" if c.id % 2 == 1 %>
               <li class=<%= @class %>><%= c.title %> ( <%= c.number %> )</li>
             <% end %>
           </ul>
         </div>
 
         <div class="work">
-          <h4 id="work-experience">Work Experience</h4>
+          <h5 id="work-experience">Work Experience</h5>
           <% @jobs.each do |j| %>
             <div class="row">
-              <p class="col-sm-2"><%= j.date %></p>
-              <p class="col-sm-3"><%= j.company %></p>
-              <p class="col-sm-4 work-position"><%= j.position %></p>
+              <p class="col-md-2 date"><%= j.date %></p>
+              <p class="col-md-3 company"><%= j.company %></p>
+              <p class="col-md-4 work-position"><%= j.position %></p>
             </div>
 
             <div class="work-description">
@@ -223,12 +227,12 @@
         </div>
         
         <div class="leadership">
-          <h4>Leadership</h4>
+          <h5>Leadership</h5>
           <% @leaderships.each do |l| %>
             <div class="row">
-              <p class="col-sm-2"><%= l.date %></p>
-              <p class="col-sm-3"><%= l.company %></p>
-              <p class="col-sm-3 leadership-position"><%= l.position %></p>
+              <p class="col-md-2 date"><%= l.date %></p>
+              <p class="col-md-3 org"><%= l.company %></p>
+              <p class="col-md-3 leadership-position"><%= l.position %></p>
             </div>
 
             <div class="leadership-description">
@@ -239,14 +243,14 @@
         </div>
 
         <div class="extracurricular">
-          <h4>Extracurriculars</h4>
+          <h5>Extracurriculars</h5>
           <div class="row">
-            <p class="col-sm-2 extracurricular-org">Alpha Phi Omega</p>
-            <p class="col-sm-8">National, co-ed, community service fraternity.</p>
+            <p class="col-md-2 extracurricular-org">Alpha Phi Omega</p>
+            <p class="col-md-8">National, co-ed, community service fraternity.</p>
           </div>
           <div class="row">
-            <p class="col-sm-2 extracurricular-org">Preuss School</p>
-            <p class="col-sm-8">Volunteered for a quarter at a transformative
+            <p class="col-md-2 extracurricular-org">Preuss School</p>
+            <p class="col-md-8">Volunteered for a quarter at a transformative
             school for under-priveliged children. Tutored high school freshmen in
             math.</p>
           </div>
@@ -260,6 +264,21 @@
 
       <h1>Projects</h1>
 
+      <!-- MOBILE -->
+      <% @projects.each do |p| %>
+        <!-- Wrapper for slides -->
+          <div class="mobile-project">
+            <a href="<%= p.link %>" target="_blank">
+              <img src="<%= p.image %>" alt= "<%= p.title %>" id="<%= p.title%>-image" class= "project-picture" >
+            </a>
+            <div class="caption">
+              <h5 class="caption-title"><%= p.title %></h5>
+              <p class="caption-description"><%= p.description %></p>
+            </div>
+          </div>
+      <% end %>
+
+      <!-- CAROUSEL FOR DESKTOP -->
       <div id="carousel-container" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -307,9 +326,9 @@
         Just Let it Out.</a>
         <a href="https://www.youtube.com/watch?v=JyqemIbjcfg" target="_blank">
         Recover.</a>
-        <small>Have a great day! <i class="em em-smile"></i>
+        <mdall>Have a great day! <i class="em em-mdile"></i>
          This message has been approved by Matthew Chinn
-         <i class="em em---1"></i></small>
+         <i class="em em---1"></i></mdall>
     </footer>
   </div>
 

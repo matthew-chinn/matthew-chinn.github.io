@@ -101,8 +101,11 @@
         position: relative;
         top: 135px;
         text-align: center;
-        img {
+        #me-picture {
             height: 250px;
+        }
+        #me-picture-mobile{
+            display: none;
         }
 
     }

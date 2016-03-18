@@ -190,5 +190,7 @@ div.section {
     position: relative;
     top: 135px;
     text-align: center; }
-    .animation-div .my-picture-div img {
+    .animation-div .my-picture-div #me-picture {
       height: 250px; }
+    .animation-div .my-picture-div #me-picture-mobile {
+      display: none; }

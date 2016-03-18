@@ -73,23 +73,26 @@ $(window).scroll(function(){
 function scrollTransition(w){
     var scrolledAmt = $(w).scrollTop();
 
-    //background color and picture
-    if( scrolledAmt > halfHeight && scrolledAmt < divHeight ){
-        var r = Math.round(red + rChange * (scrolledAmt-halfHeight)),
-            g = Math.round(green + gChange * (scrolledAmt-halfHeight)),
-            b = Math.round(blue + bChange * (scrolledAmt-halfHeight));
-        animationDiv.css( "backgroundColor", rgb(r,g,b) );
-        var opacity = Math.round((divHeight-scrolledAmt) / halfHeight *100)/100;
-        pic.css("opacity", opacity);
-    }
-    else if( scrolledAmt < halfHeight ){
-        animationDiv.css( "backgroundColor", rgb(red,green,blue));
-        pic.css("opacity", 1);
+    if( !isMobile && !isSmall ){
+        //background color and picture
+        if( scrolledAmt > halfHeight && scrolledAmt < divHeight ){
+            var r = Math.round(red + rChange * (scrolledAmt-halfHeight)),
+                g = Math.round(green + gChange * (scrolledAmt-halfHeight)),
+                b = Math.round(blue + bChange * (scrolledAmt-halfHeight));
+            animationDiv.css( "backgroundColor", rgb(r,g,b) );
+            var opacity = Math.round((divHeight-scrolledAmt) / halfHeight *100)/100;
+            pic.css("opacity", opacity);
+        }
+        else if( scrolledAmt < halfHeight ){
+            animationDiv.css( "backgroundColor", rgb(red,green,blue));
+            pic.css("opacity", 1);
+        }
+
+        var picVMoveAmt = (divHeight - picTop) / divHeight; 
+        //amount for pic to Move down
+        picDiv.css( "top", picTop + picVMoveAmt * scrolledAmt );
     }
 
-    var picVMoveAmt = (divHeight - picTop) / divHeight; 
-    //amount for pic to Move down
-    picDiv.css( "top", picTop + picVMoveAmt * scrolledAmt );
 
     //header strip stick to top
     if( scrolledAmt >= divHeight ){
@@ -111,9 +114,16 @@ function rgb(r,g,b) {
 
 function centerName() {
     calibrate();
-    fullName.css( { "top": nameHeight,
-                     "left": centerNameFactor,
-                     "position": "absolute" } );
+    if( isMobile ){
+        fullName.css( {"top":"auto",
+                       "bottom": "10px",
+                       "left": centerNameFactor,
+                       "position": "absolute" } );
+    }else{
+        fullName.css( { "top": nameHeight,
+                         "left": centerNameFactor,
+                         "position": "absolute" } );
+    }
 }
 
 //calibrate width and height

@@ -24,8 +24,10 @@
 
   <script src="script.js" type="text/javascript"></script>
   <script src="javascript/velocity.js" type="text/javascript"></script>
-  <link rel='stylesheet' type='text/css' href="style.css">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel='stylesheet' type='text/css' href="style.css">
+  <link rel='stylesheet' type='text/css' href="mobile_style.css" media="only
+  screen and (max-device-width: 480px)">
 
 </head>
 <body id="top" data-spy="scroll" data-target=".nav-container">
@@ -39,7 +41,8 @@
 
         <!--If doing pixel thing, uncomment this div -->
         <div class="my-picture-div">
-          <img id="me-picture" src="images/aboutpic.png" alt="Picture of Matt">
+          <img class="non-mobile" id="me-picture" src="images/aboutpic.png" alt="Picture of Matt">
+          <img id="me-picture-mobile" src="images/mobilepic.png" alt="Picture of Matt">
         </div>
 
         <canvas id="myCanvas">
@@ -69,7 +72,7 @@
       </div>
 
       <!-- COOKIE RUN -->
-      <div id="runner" class="hide">
+      <div id="runner" class="hide non-mobile">
       <svg width="40" height="60">
           <circle id="face" cx="20" cy="20" r="6" stroke="black"
               stroke-width=".5" fill="#D4BF94"/>
@@ -97,7 +100,7 @@
 
       <img id="cookie" src="images/cookie.jpg" class="hide"/>
 
-      <button class="btn btn-default" role="button" id="runnerbutton" 
+      <button class="btn btn-default non-mobile" role="button" id="runnerbutton" 
               type="button">
         Click here
       </button>
@@ -107,7 +110,7 @@
     <div class="header-filler"></div>
     <!-- NAV BUTTONS -->
     <div class="container nav-container header-strip">
-      <ul class="nav">
+      <ul class="nav non-mobile">
            <li><a href="#about">About</a></li>
            <li><a href="#contact">Contact</a></li>
            <li class="top-button"> <a href="#top"><img src="images/arrow.png"></a> </li>
@@ -128,32 +131,33 @@
         </p>
         <h5 class="favorites">Some of my favorite things:</h5>
 
-        <div class="row">
-          <p class="col-sm-6">Hobbies: Drums, guitar, volleyball, bowling</p>
-          <p class="col-sm-6">Animal: Dogs like 
-          <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg"
-             target="_blank">
-            this one</a>
-          </p>
-        </div>
+        <div class="favorites">
+          <div class="row">
+            <p class="col-md-6">Hobbies: Drums, guitar, volleyball, bowling</p>
+            <p class="col-md-6">Animal: Dogs like 
+            <a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Sad-pug.jpg"
+               target="_blank">
+              this one</a>
+            </p>
+          </div>
 
-        <div class="row">
-          <p class="col-sm-6">TV Shows: Friends, The Office, Sherlock</p>
-          <p class="col-sm-6">Movies: Anything Marvel or comedy</p>
-        </div>
+          <div class="row">
+            <p class="col-md-6">TV Shows: Friends, The Office, Sherlock</p>
+            <p class="col-md-6">Movies: Anything Marvel or comedy</p>
+          </div>
 
-        <div class="row">
-          <p class="col-sm-6">Music: Ed Sheeran, BORNS, CHVRCHES, James Bay
-          </p>
-          <p class="col-sm-6">Sport Teams: LA Angels Baseball, SD Chargers
-          Football</p>
-        </div>
+          <div class="row">
+            <p class="col-md-6">Music: Ed Sheeran, BORNS, CHVRCHES, James Bay
+            </p>
+            <p class="col-md-6">Sport Teams: LA Angels Baseball, SD Chargers
+            Football</p>
+          </div>
 
-        <div class="row">
-          <p class="col-sm-6">Food: Anything with noodles or pasta</p>
-          <p class="col-sm-6">Sweet: Dark chocolate anything or Twix</p>
-        </div>
-          
+          <div class="row">
+            <p class="col-md-6">Food: Anything with noodles or pasta</p>
+            <p class="col-md-6">Sweet: Dark chocolate anything or Twix</p>
+          </div>
+        </div> 
     </div>
 
     <!-- CONTACT -->
@@ -161,13 +165,13 @@
     <div class="contact-section section">
       <h1>Contact</h1>
       <div class="row">
-        <p class="contact-info col-sm-12">My e-mail: 
+        <p class="contact-info col-md-12">My e-mail: 
           <a href="mailto:mattchinn96@gmail.com">mattchinn96@gmail.com</a>
         <p>
-        <p class="contact-info col-sm-12">My LinkedIn:
+        <p class="contact-info col-md-12">My LinkedIn:
           <a href="http://www.linkedin.com/in/mchinn1">linkedin.com/in/mchinn1</a>
         </p>
-        <p class="contact-info col-sm-12">My GitHub:
+        <p class="contact-info col-md-12">My GitHub:
           <a href="http://www.github.com/matthew-chinn">github.com/matthew-chinn</a>
         </p>
       </div>
@@ -181,44 +185,44 @@
         Download my resume <a href="resume.pdf" target="_blank">here</a>
       </p>
 
-      <h4 id="education">Education</h4>
+      <h5 id="education">Education</h5>
         <div class="row" id="school">
-          <p class="col-sm-2">Class of 2018</p>
-          <p class="col-sm-3">Bachelor of Science, Computer Science</p>
-          <p class="col-sm-3">The University of California, San Diego</p>
+          <p class="col-md-2">Class of 2018</p>
+          <p class="col-md-3">Bachelor of Science, Computer Science</p>
+          <p class="col-md-3">The University of California, San Diego</p>
         </div>
         
         <div class="row">
-          <p class="col-sm-2">Total GPA: 3.8</p>
-          <p class="col-sm-4">Minor: Economics</p>
+          <p class="col-md-2">Total GPA: 3.8</p>
+          <p class="col-md-4">Minor: Economics</p>
         </div> 
 
         <div class="row">
-          <p style="font-weight:bold" class="col-sm-4">Relevant Courses:</p>
+          <h5 class="col-md-4">Relevant Courses:</h5>
         </div>
 
         <div class="row courses">
           <ul>
-                                      <li class=col-sm-5>Introduction to Java ( CSE 11 )</li>
-                                      <li class=col-sm-7>Discrete Mathematics ( MATH 15A )</li>
-                                      <li class=col-sm-5>Mathematics for Algorithms & Systems ( CSE 21 )</li>
-                                      <li class=col-sm-7>Basic Data Structures & OO Design ( CSE 12 )</li>
-                                      <li class=col-sm-5>Software Tools & Techniques Laboratory ( CSE 15L )</li>
-                                      <li class=col-sm-7>Computer Organization & Systems Programming ( CSE 30 )</li>
-                                      <li class=col-sm-5>Advanced Data Structures ( CSE 100 )</li>
-                                      <li class=col-sm-7>Theory of Computability ( CSE 105 )</li>
-                                      <li class=col-sm-5>Software Engineering ( CSE 110 )</li>
-                                      <li class=col-sm-7>Components & Design Techniques for Digital Systems ( CSE 140 )</li>
-                                      <li class=col-sm-5>Digital Systems Laboratory ( CSE 140L )</li>
+                                      <li class=col-md-5>Introduction to Java ( CSE 11 )</li>
+                                      <li class=col-md-7>Discrete Mathematics ( MATH 15A )</li>
+                                      <li class=col-md-5>Mathematics for Algorithms & Systems ( CSE 21 )</li>
+                                      <li class=col-md-7>Basic Data Structures & OO Design ( CSE 12 )</li>
+                                      <li class=col-md-5>Software Tools & Techniques Laboratory ( CSE 15L )</li>
+                                      <li class=col-md-7>Computer Organization & Systems Programming ( CSE 30 )</li>
+                                      <li class=col-md-5>Advanced Data Structures ( CSE 100 )</li>
+                                      <li class=col-md-7>Theory of Computability ( CSE 105 )</li>
+                                      <li class=col-md-5>Software Engineering ( CSE 110 )</li>
+                                      <li class=col-md-7>Components & Design Techniques for Digital Systems ( CSE 140 )</li>
+                                      <li class=col-md-5>Digital Systems Laboratory ( CSE 140L )</li>
                       </ul>
         </div>
 
         <div class="work">
-          <h4 id="work-experience">Work Experience</h4>
+          <h5 id="work-experience">Work Experience</h5>
                       <div class="row">
-              <p class="col-sm-2">2015-Present</p>
-              <p class="col-sm-3">UCSD Computer Science Department</p>
-              <p class="col-sm-4 work-position">Tutor</p>
+              <p class="col-md-2 date">2015-Present</p>
+              <p class="col-md-3 company">UCSD Computer Science Department</p>
+              <p class="col-md-4 work-position">Tutor</p>
             </div>
 
             <div class="work-description">
@@ -229,9 +233,9 @@
                  assignments, quizzes, and exams. </p>
             </div>
                       <div class="row">
-              <p class="col-sm-2">July 2015</p>
-              <p class="col-sm-3">Digital Media Academy</p>
-              <p class="col-sm-4 work-position">Teacher Assistant</p>
+              <p class="col-md-2 date">July 2015</p>
+              <p class="col-md-3 company">Digital Media Academy</p>
+              <p class="col-md-4 work-position">Teacher Assistant</p>
             </div>
 
             <div class="work-description">
@@ -244,11 +248,11 @@
         </div>
         
         <div class="leadership">
-          <h4>Leadership</h4>
+          <h5>Leadership</h5>
                       <div class="row">
-              <p class="col-sm-2">January 2016-Present</p>
-              <p class="col-sm-3">Alpha Phi Omega</p>
-              <p class="col-sm-3 leadership-position">Webmaster</p>
+              <p class="col-md-2 date">January 2016-Present</p>
+              <p class="col-md-3 org">Alpha Phi Omega</p>
+              <p class="col-md-3 leadership-position">Webmaster</p>
             </div>
 
             <div class="leadership-description">
@@ -259,9 +263,9 @@
                         described below. </p>
             </div>
                       <div class="row">
-              <p class="col-sm-2">January-March 2015</p>
-              <p class="col-sm-3">Alpha Phi Omega</p>
-              <p class="col-sm-3 leadership-position">Finance Chair</p>
+              <p class="col-md-2 date">January-March 2015</p>
+              <p class="col-md-3 org">Alpha Phi Omega</p>
+              <p class="col-md-3 leadership-position">Finance Chair</p>
             </div>
 
             <div class="leadership-description">
@@ -272,14 +276,14 @@
         </div>
 
         <div class="extracurricular">
-          <h4>Extracurriculars</h4>
+          <h5>Extracurriculars</h5>
           <div class="row">
-            <p class="col-sm-2 extracurricular-org">Alpha Phi Omega</p>
-            <p class="col-sm-8">National, co-ed, community service fraternity.</p>
+            <p class="col-md-2 extracurricular-org">Alpha Phi Omega</p>
+            <p class="col-md-8">National, co-ed, community service fraternity.</p>
           </div>
           <div class="row">
-            <p class="col-sm-2 extracurricular-org">Preuss School</p>
-            <p class="col-sm-8">Volunteered for a quarter at a transformative
+            <p class="col-md-2 extracurricular-org">Preuss School</p>
+            <p class="col-md-8">Volunteered for a quarter at a transformative
             school for under-priveliged children. Tutored high school freshmen in
             math.</p>
           </div>
@@ -293,6 +297,53 @@
 
       <h1>Projects</h1>
 
+      <!-- MOBILE -->
+              <!-- Wrapper for slides -->
+          <div class="mobile-project">
+            <a href="#" target="_blank">
+              <img src="images/greensheet.png" alt= "Requirement Tracker (Ruby on Rails)" id="Requirement Tracker (Ruby on Rails)-image" class= "project-picture" >
+            </a>
+            <div class="caption">
+              <h5 class="caption-title">Requirement Tracker (Ruby on Rails)</h5>
+              <p class="caption-description">Help members record their service hours and other
+                         requirements.</p>
+            </div>
+          </div>
+              <!-- Wrapper for slides -->
+          <div class="mobile-project">
+            <a href="#" target="_blank">
+              <img src="images/forum.png" alt= "Forum (Ruby on Rails)" id="Forum (Ruby on Rails)-image" class= "project-picture" >
+            </a>
+            <div class="caption">
+              <h5 class="caption-title">Forum (Ruby on Rails)</h5>
+              <p class="caption-description">Help members record their service hours and other
+                         requirements.</p>
+            </div>
+          </div>
+              <!-- Wrapper for slides -->
+          <div class="mobile-project">
+            <a href="http://matthew-chinn.github.io/palace" target="_blank">
+              <img src="images/palace.jpg" alt= "Palace (HTML/CSS/JS)" id="Palace (HTML/CSS/JS)-image" class= "project-picture" >
+            </a>
+            <div class="caption">
+              <h5 class="caption-title">Palace (HTML/CSS/JS)</h5>
+              <p class="caption-description">Implemented an online version of a card game to practice web development.
+                         Created a simple AI to play against the user. Code viewable on Github.</p>
+            </div>
+          </div>
+              <!-- Wrapper for slides -->
+          <div class="mobile-project">
+            <a href="https://github.com/matthew-chinn/GymLog" target="_blank">
+              <img src="images/gym1.jpg" alt= "Workout Android App (Java/XML)" id="Workout Android App (Java/XML)-image" class= "project-picture" >
+            </a>
+            <div class="caption">
+              <h5 class="caption-title">Workout Android App (Java/XML)</h5>
+              <p class="caption-description">Allows the user, to record workout data, view history, and send emails containing that day's 
+                         workout statistics.</p>
+            </div>
+          </div>
+      
+      <!-- CAROUSEL FOR DESKTOP -->
       <div id="carousel-container" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -376,9 +427,9 @@
         Just Let it Out.</a>
         <a href="https://www.youtube.com/watch?v=JyqemIbjcfg" target="_blank">
         Recover.</a>
-        <small>Have a great day! <i class="em em-smile"></i>
+        <mdall>Have a great day! <i class="em em-mdile"></i>
          This message has been approved by Matthew Chinn
-         <i class="em em---1"></i></small>
+         <i class="em em---1"></i></mdall>
     </footer>
   </div>
 
