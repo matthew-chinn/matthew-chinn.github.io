@@ -25,7 +25,7 @@ body {
         height: 56px;
         font-size: 25px; }
       .header-strip ul li.top-button {
-        display: none;
+        visibility: hidden;
         position: relative;
         bottom: 3px; }
         .header-strip ul li.top-button a {

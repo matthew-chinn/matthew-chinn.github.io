@@ -40,7 +40,7 @@ $inside-header: $header-height - 2*$border;
             display: inline-block;
 
             &.top-button{
-                display: none;
+                visibility: hidden;
                 position: relative;
                 bottom: 3px; //to line up for somee reason
 

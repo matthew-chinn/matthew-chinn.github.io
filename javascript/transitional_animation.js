@@ -95,12 +95,12 @@ function scrollTransition(w){
     if( scrolledAmt >= divHeight ){
         headerStrip.css({ position: "fixed", top: "0px" });
         headerFiller.css({ display: "block" });
-        topButton.css("display", "inline-block");
+        topButton.css("visibility", "visible");
     }
     else{
         headerStrip.css({ position: "static", top: "auto" });
         headerFiller.css({ display: "none" });
-        topButton.css("display", "none");
+        topButton.css("visibility", "hidden");
     }
 }
 
