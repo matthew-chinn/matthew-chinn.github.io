@@ -30,17 +30,25 @@ $inside-header: $header-height - 2*$border;
 
     ul {
         text-align: center;
+        height: $inside-header;
 
         li{
             a{
-                height: $inside-header; //header-height - 2*border
-                font-size: 25px;
+                //height: $inside-header; //header-height - 2*border
+                position: relative;
+                bottom: 20px;
+                height: initial;
+                padding: 0px 0px;
+                margin: 0 15px;
+
+                &:hover{
+                  background-color: initial;
+                }
             }
             height: $inside-header; //header-height - 2*border
             display: inline-block;
 
-            &.top-button{
-                visibility: hidden;
+/*            &.top-button{
                 position: relative;
                 bottom: 3px; //to line up for somee reason
 
@@ -48,10 +56,16 @@ $inside-header: $header-height - 2*$border;
                     padding: 5px 5px;
                 }
 
-                img{
-                    height: 45px;
-                    width: 45px;
-                }
+            }
+*/
+            svg {
+              stroke: green;
+              stroke-width: 5px;
+              fill: beige;
+
+              &:hover{
+                fill: white;
+              }
             }
         }
 
@@ -65,11 +79,10 @@ $inside-header: $header-height - 2*$border;
 }
 
 //small screen condense buttons
-@media (max-width: 600px){
+@media (max-width: 650px){
     .header-strip ul li {
         a{
             width: 90px;
-            padding: 10px 0px;
         }
 
         //hide home button
@@ -99,6 +112,10 @@ $inside-header: $header-height - 2*$border;
     * {
         font-size: 10px;
     }
+}
+
+@media (max-width: 650px){
+  .footer { visibility: hidden; }
 }
 
 /* each section i.e. about, contact, resume */

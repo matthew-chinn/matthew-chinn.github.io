@@ -17,31 +17,43 @@ body {
   height: 70px;
   z-index: 3; }
   .header-strip ul {
-    text-align: center; }
+    text-align: center;
+    height: 56px; }
     .header-strip ul li {
       height: 56px;
-      display: inline-block; }
+      display: inline-block;
+      /*            &.top-button{
+                      position: relative;
+                      bottom: 3px; //to line up for somee reason
+      
+                      a{
+                          padding: 5px 5px;
+                      }
+      
+                  }
+      */ }
       .header-strip ul li a {
-        height: 56px;
-        font-size: 25px; }
-      .header-strip ul li.top-button {
-        visibility: hidden;
         position: relative;
-        bottom: 3px; }
-        .header-strip ul li.top-button a {
-          padding: 5px 5px; }
-        .header-strip ul li.top-button img {
-          height: 45px;
-          width: 45px; }
+        bottom: 20px;
+        height: initial;
+        padding: 0px 0px;
+        margin: 0 15px; }
+        .header-strip ul li a:hover {
+          background-color: initial; }
+      .header-strip ul li svg {
+        stroke: green;
+        stroke-width: 5px;
+        fill: beige; }
+        .header-strip ul li svg:hover {
+          fill: white; }
 
 .header-filler {
   display: none;
   height: 70px; }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .header-strip ul li a {
-    width: 90px;
-    padding: 10px 0px; }
+    width: 90px; }
   .header-strip ul li.top-button {
     display: none; } }
 /** footer */
@@ -59,6 +71,9 @@ body {
   .footer * {
     font-size: 10px; }
 
+@media (max-width: 650px) {
+  .footer {
+    visibility: hidden; } }
 /* each section i.e. about, contact, resume */
 .section-spacing {
   position: relative;

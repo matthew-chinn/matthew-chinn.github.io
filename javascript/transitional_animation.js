@@ -7,6 +7,7 @@ var rChange, gChange, bChange;
 var red = 0, green = 102, blue = 255; //"#4db8ff" beginning background color
 
 var headerStrip, headerFiller, topButton;
+var headerIcons, iconOriginalBottom, iconOriginalFinal;
 
 var pic;
 var picDiv, picTop;
@@ -25,6 +26,9 @@ $(document).ready(function(){
     headerStrip = $('.header-strip');
     headerFiller = $('.header-filler');
     topButton = $('.top-button');
+    headerIcons = $('.nav-icon');
+    iconOriginalBottom = parseInt( headerIcons.css("bottom") ); //original value
+    iconOriginalFinal = 10;
 
     calibrate();
     centerName();
@@ -41,7 +45,7 @@ $(document).ready(function(){
     //scroll to button when clicked
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
-        if( $(this).attr("href")=="#carousel-container") return; //dont disrupt arrows
+        if( $(this).attr("href")=="#carousel-container") return; //dont include arrows
 
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
@@ -94,17 +98,28 @@ function scrollTransition(w){
     }
 
 
+
     //header strip stick to top
     if( scrolledAmt >= divHeight ){
         headerStrip.css({ position: "fixed", top: "0px" });
         headerFiller.css({ display: "block" });
-        topButton.css("visibility", "visible");
     }
     else{
         headerStrip.css({ position: "static", top: "auto" });
         headerFiller.css({ display: "none" });
-        topButton.css("visibility", "hidden");
+        headerIcons.css({ bottom: iconOriginalBottom }); //whatever original value was
     }
+    
+    //for the buttons to scroll down appropriately
+    var change = iconOriginalBottom - iconOriginalFinal;
+    var diff = scrolledAmt - ( divHeight - change );
+    if ( diff > 0 && diff <= iconOriginalFinal ){
+        headerIcons.css({ bottom: iconOriginalBottom - diff + "px" });
+    }
+    else if( diff > iconOriginalFinal ){
+        headerIcons.css({ bottom: iconOriginalFinal + "px" });
+    }
+    
 }
 
 //return string version of rgb 
