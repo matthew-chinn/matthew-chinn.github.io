@@ -33,39 +33,35 @@ $inside-header: $header-height - 2*$border;
         height: $inside-header;
 
         li{
+            height: $inside-header; //header-height - 2*border
+            display: inline-block;
+
             a{
                 //height: $inside-header; //header-height - 2*border
                 position: relative;
                 bottom: 20px;
-                height: initial;
+                height: 90px;
+                width: 90px;
                 padding: 0px 0px;
                 margin: 0 15px;
+                border: 5px solid green;
+                border-radius: 50%;
+                background-color: beige;
 
                 &:hover{
-                  background-color: initial;
-                }
-            }
-            height: $inside-header; //header-height - 2*border
-            display: inline-block;
+                  background-color: white;
 
-/*            &.top-button{
-                position: relative;
-                bottom: 3px; //to line up for somee reason
-
-                a{
-                    padding: 5px 5px;
+                  img{
+                    height: 55px;
+                  }
                 }
 
-            }
-*/
-            svg {
-              stroke: green;
-              stroke-width: 5px;
-              fill: beige;
-
-              &:hover{
-                fill: white;
-              }
+                img {
+                  height: 50px;
+                  width: auto;
+                  margin: 13px;
+                  vertical-align: top;
+                }
             }
         }
 

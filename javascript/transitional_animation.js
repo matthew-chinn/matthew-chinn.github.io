@@ -28,7 +28,7 @@ $(document).ready(function(){
     topButton = $('.top-button');
     headerIcons = $('.nav-icon');
     iconOriginalBottom = parseInt( headerIcons.css("bottom") ); //original value
-    iconOriginalFinal = 10;
+    iconOriginalFinal = 8;
 
     calibrate();
     centerName();

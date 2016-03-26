@@ -21,31 +21,26 @@ body {
     height: 56px; }
     .header-strip ul li {
       height: 56px;
-      display: inline-block;
-      /*            &.top-button{
-                      position: relative;
-                      bottom: 3px; //to line up for somee reason
-      
-                      a{
-                          padding: 5px 5px;
-                      }
-      
-                  }
-      */ }
+      display: inline-block; }
       .header-strip ul li a {
         position: relative;
         bottom: 20px;
-        height: initial;
+        height: 90px;
+        width: 90px;
         padding: 0px 0px;
-        margin: 0 15px; }
+        margin: 0 15px;
+        border: 5px solid green;
+        border-radius: 50%;
+        background-color: beige; }
         .header-strip ul li a:hover {
-          background-color: initial; }
-      .header-strip ul li svg {
-        stroke: green;
-        stroke-width: 5px;
-        fill: beige; }
-        .header-strip ul li svg:hover {
-          fill: white; }
+          background-color: white; }
+          .header-strip ul li a:hover img {
+            height: 55px; }
+        .header-strip ul li a img {
+          height: 50px;
+          width: auto;
+          margin: 13px;
+          vertical-align: top; }
 
 .header-filler {
   display: none;
