@@ -69,8 +69,9 @@ $(window).on('resize', function(){
 
 $(window).scroll(function(){
     //if ( !isMobile && !isSmall ){
-        scrollTransition(this)
+        scrollTransition(this);
     //}
+    animateTexts(this);
 });
 
 //on scroll, color turn to white
