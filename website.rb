@@ -62,6 +62,14 @@ end
 @courses << Course.new( "Digital Systems Laboratory", "CSE 140L", @courses.count + 1)
 
 @jobs = Array.new
+
+@jobs << Job.new( "June-September 2016", "Lockheed Martin", "Software
+Engineering Intern", "Worked with a team on a plugin dedicated to integrating
+two different systems and providing a graphical representation. Learned and
+applied new technologies/methodologies including ReST, DDS, Java GUI, and
+JMockit. Contributed to interface design, which was utilized in the plugin to
+provide flexibility." )
+
 @jobs << Job.new( "2015-Present", "UCSD Computer Science Department", "Tutor",
                  "Tutored an Introduction to Java course. Gained experience
                  leading discussion sections and a small study
@@ -89,24 +97,33 @@ end
                          "leadership" )
 
 @projects = Array.new
-@projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#", "images/greensheet.png", 
-                         "Help members record their service hours and other
-                         requirements.", @projects.count + 1 )
 
-@projects << Project.new( "Forum (Ruby on Rails)", "#", "images/forum.png", 
+@projects << Project.new( "DebateGate (Ruby on Rails)", 
+                         "https://debate-gate.herokuapp.com/",
+                         "images/debate-gate.png", 
+                         "An incomplete web application that helps to facilitate
+                         online debates.", @projects.count + 1 )
+                         
+@projects << Project.new( "Requirement Tracker (Ruby on Rails)", "#",
+                         "images/greensheet.png", "Help members record their
+service hours and other requirements.", @projects.count + 1 )
+
+@projects << Project.new( "Forum (Ruby on Rails)", "#", "images/forum.png",
                          "Help members record their service hours and other
                          requirements.", @projects.count + 1 )
 
 @projects << Project.new( "Palace (HTML/CSS/JS)",
-                         "http://matthew-chinn.github.io/palace", "images/palace.jpg", 
-                         "Implemented an online version of a card game to practice web development.
-                         Created a simple AI to play against the user. Code viewable on Github.", 
-                         @projects.count + 1 )
+                         "http://matthew-chinn.github.io/palace",
+                         "images/palace.jpg", "Implemented an online version of
+                         a card game to practice web development. Created a
+                         simple AI to play against the user. Code viewable on
+                         Github.", @projects.count + 1 )
 
 @projects << Project.new( "Workout Android App (Java/XML)",
-                         "https://github.com/matthew-chinn/GymLog", "images/gym1.jpg", 
-                         "Allows the user, to record workout data, view history, and send emails containing that day's 
-                         workout statistics.", @projects.count + 1 )
+                         "https://github.com/matthew-chinn/GymLog",
+                         "images/gym1.jpg", "Allows the user, to record workout
+                         data, view history, and send emails containing that
+                         day's workout statistics.", @projects.count + 1 )
 
 erb = ERB.new(File.open("#{__dir__}/website.html.erb").read, 0, '>')
 puts erb.result binding
