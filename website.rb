@@ -98,6 +98,14 @@ provide flexibility." )
 
 @projects = Array.new
 
+@projects << Project.new( "Team Assassins (Ruby on Rails)", 
+                          "http://team-assassins.herokuapp.com",
+                          "images/assassins.png",
+                          "An application to help an administrator manage a game of 
+                          Assassins, from assigning targets to counting kills and 
+                          tracking leaderboards",
+                          @projects.count + 1 )
+
 @projects << Project.new( "DebateGate (Ruby on Rails)", 
                          "https://debate-gate.herokuapp.com/",
                          "images/debate-gate.png", 
