@@ -60,6 +60,11 @@ end
 @courses << Course.new( "Software Engineering", "CSE 110", @courses.count + 1)
 @courses << Course.new( "Components & Design Techniques for Digital Systems", "CSE 140", @courses.count + 1)
 @courses << Course.new( "Digital Systems Laboratory", "CSE 140L", @courses.count + 1)
+@courses << Course.new( "Algorithms", "CSE 101", @courses.count + 1)
+@courses << Course.new( "Programming Languages", "CSE 130", @courses.count + 1)
+@courses << Course.new( "Computer Architecture", "CSE 141", @courses.count + 1)
+@courses << Course.new( "Computer Architecture Lab", "CSE 141L", @courses.count + 1)
+@courses << Course.new( "Operating Systems", "CSE 120", @courses.count + 1)
 
 @jobs = Array.new
 
@@ -70,7 +75,7 @@ applied new technologies/methodologies including ReST, DDS, Java GUI, and
 JMockit. Contributed to interface design, which was utilized in the plugin to
 provide flexibility." )
 
-@jobs << Job.new( "2015-Present", "UCSD Computer Science Department", "Tutor",
+@jobs << Job.new( "2015-March 2017", "UCSD Computer Science Department", "Tutor",
                  "Tutored an Introduction to Java course. Gained experience
                  leading discussion sections and a small study
                  group. Assisted students with programming questions during lab
